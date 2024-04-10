@@ -8,8 +8,6 @@ import { Book } from "@/types/Book"
 export default function BookRow() {
   const { data: books, isError, isLoading } = useBooks({})
 
-  console.log("DAta", books)
-
   if (isLoading || isError) return <CardSkeletons num={5} />
 
   return (
