@@ -14,4 +14,22 @@ export interface Book {
   __v: number
 }
 
-export interface BookQueryProps {}
+export interface BookQueryProps {
+  slug: string;
+  limit: number;
+  pageNum: number;
+  ids: string[];
+  searchTerm: string;
+}
+
+export interface BookQueryObject {
+  pagination: { 
+    limit?: number; 
+    page?: number;
+    pageSize?: number;
+  };
+  filters: { 
+    categories: { slug: { $eq: string; }; };
+    id: { $in: string[]; };
+  };
+}
