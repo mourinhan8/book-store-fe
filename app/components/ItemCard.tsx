@@ -81,7 +81,7 @@ const ItemCard = ({
           <h3 className="text-base font-bold">{title}</h3>
           <h5 className="text-xs">{author}</h5>
           <h6 className="mt-2 text-xs font-bold">
-            <i>{tag}</i>
+            <i>{tag.split(",").join(", ")}</i>
           </h6>
         </header>
         <div className="flex justify-between gap-3">
